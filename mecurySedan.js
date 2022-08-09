@@ -28,11 +28,6 @@ scheduleService	mileage	if mileage is greater than 30000, time for maintenance =
 class Car extends VehicleModule {
   constructor(make, model, year, color, mileage) {
     super(make, model, year, color, mileage);
-    this.make = make;
-    this.model = model;
-    this.year = year;
-    this.color = color;
-    this.mileage = mileage;
     this.passengers = 0;
     this.maxPassengers = 6;
     this.wheelNum = 4;
@@ -42,21 +37,19 @@ class Car extends VehicleModule {
   }
   loadPassenger(passengers) {
     if (this.passengers < this.maxPassengers) {
-      let availableRoom = true;
-    } else {
-      let availableRoom = false;
+      this.availableRoom == true;
     }
   }
 
   start() {
     if (this.fuel > 0) {
-      let start = true;
+      this.start == true;
     }
   }
 
   scheduleService(mileage) {
     if (this.mileage > 3000) {
-      let timeForMaintenace = true;
+      this.timeForMaintenance = true;
     }
   }
 }
